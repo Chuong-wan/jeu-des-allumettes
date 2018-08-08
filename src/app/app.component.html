@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="layout">
+  <h1>
+    Bienvenu dans le {{ title }}!
+  </h1>
+  <form action="" *ngIf="!gameStarted">
+    <label>
+      Choisissez un nombre d'alumette entre 10 et 40 
+    </label>
+    <input type="text" [(ngModel)]="matchesNumber" name="matchesNumber">
+    <button (click)="startGame()">ok</button>
+  </form>
+  
+  <div class="game" *ngIf="gameStarted">
+  <app-matches-list></app-matches-list>
+    <div class="players">
+      <app-player class="player left"></app-player>
+      <app-player class="player right"></app-player>
+    </div>
+</div>
+</div>
+
+
+
+
+
